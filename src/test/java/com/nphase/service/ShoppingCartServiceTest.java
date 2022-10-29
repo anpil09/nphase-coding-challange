@@ -11,7 +11,9 @@ import java.math.BigDecimal;
 import java.util.Arrays;
 
 public class ShoppingCartServiceTest {
-    private final ShoppingCartService service = new ShoppingCartService();
+
+    private final ConfigPropertiesService configPropertiesService = new ConfigPropertiesService();
+    private final ShoppingCartService service = new ShoppingCartService(configPropertiesService);
 
     @Test
     public void calculatesPrice()  {
